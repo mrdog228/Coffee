@@ -1,0 +1,13 @@
+
+в head вставить viewport:
+
+<meta content="width=device-width, initial-scale=1" name="viewport">
+
+
+подключение шрифта в css 
+@font-face {
+  font-family: 'Kurale';
+  src: url('../fonts/Kurale.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
