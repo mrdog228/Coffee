@@ -38,21 +38,106 @@ header
   justify-content: end;
 }
 
-.list .list1 
+
+.burger-checkbox
 {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;                 
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  
+  display: none;
 }
 
-.list .list1 a
+/* Иконка бургер-меню */
+.burger-icon
 {
-  color: whitesmoke;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.burger-icon span
+{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #d11212;
+  border-radius: 3px;
+  transition: all 0.3s ease; /* Плавность */
+  transform-origin: left center; /* Точка трансформации для крестика */
+}
+
+.mobile-nav
+{
+  position: fixed;
+  top: 0;
+  left: 0; 
+  width: 280px;
+  height: 100vh; 
+  background-color: #ffffff;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 80px 30px 30px;
+  z-index: 99; 
+
+  
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Мягкая анимация выезда */
+}
+
+
+.nav-list
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-list a
+{
   text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #334155;
+  transition: color 0.2s;
+}
+
+
+
+.burger-checkbox:checked ~ .mobile-nav
+{
+  transform: translateX(0);
+}
+
+
+.burger-checkbox:checked ~ .burger-icon span
+{
+  background-color: #000000;
+}
+
+
+.burger-checkbox:checked ~ .burger-icon span:nth-child(1)
+{
+  transform: rotate(45deg);
+}
+
+
+.burger-checkbox:checked ~ .burger-icon span:nth-child(2)
+{
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+
+.burger-checkbox:checked ~ .burger-icon span:nth-child(3)
+{
+  transform: rotate(-45deg);
 }
 
 
@@ -333,6 +418,228 @@ header
 {
   color: rgb(73, 10, 10);
   font-weight: bold;
+}
+
+
+/* Подвал */
+
+.footer
+{
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.footer h2
+{
+  margin: 0 0 40px;
+  font-size: 32px;
+}
+
+.con
+{
+  display: flex;
+  justify-content: center;
+}
+
+.info-list
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+}
+
+.info
+{
+  border: 2px solid rgb(201, 162, 94);
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 340px;
+  min-height: 200px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h3
+{
+  color: rgb(201, 162, 94);
+  font-size: 26px;
+  margin: 0 0 15px;
+}
+
+.info p
+{
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.author
+{
+  margin: 50px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #999;
+  font-size: 14px;
+}
+
+
+
+
+@media (max-width: 992px)
+{
+  .Offer
+  {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .Offer article
+  {
+    width: 45%;
+  }
+
+  .Offer img
+  {
+    max-width: 100%;
+  }
+
+  .blogList
+  {
+    flex-wrap: wrap;
+    padding: 0 30px;
+  }
+
+  .photo1, .photo2, .photo3
+  {
+    width: 45%;
+  }
+
+  .shopList
+  {
+    padding: 0 30px;
+  }
+
+  .product
+  {
+    width: 40%;
+  }
+}
+
+
+
+
+@media (max-width: 768px)
+{
+  .home, .Blog, .badge, .shop
+  {
+    background-attachment: scroll;
+  }
+
+  .content
+  {
+    margin-top: 25%;
+  }
+
+  .fabrica
+  {
+    transform: none;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .txt p
+  {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .badge img
+  {
+    max-width: 90%;
+  }
+
+  .Blog, .shop
+  {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .blogList
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo1, .photo2, .photo3
+  {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .stats
+  {
+    padding: 50px 20px;
+  }
+
+  .statsList
+  {
+    gap: 30px;
+  }
+
+  .info
+  {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+
+@media (max-width: 480px)
+{
+  .Offer
+  {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Offer article
+  {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .shopList
+  {
+    padding: 0 20px;
+  }
+
+  .product
+  {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .statsNumber
+  {
+    font-size: 40px;
+  }
+
+  .footer h2
+  {
+    font-size: 26px;
+  }
 }
 
 
