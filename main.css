@@ -44,7 +44,7 @@ header
   display: none;
 }
 
-/* Иконка бургер-меню */
+
 .burger-icon
 {
   position: fixed;
@@ -67,8 +67,8 @@ header
   width: 100%;
   background-color: #d11212;
   border-radius: 3px;
-  transition: all 0.3s ease; /* Плавность */
-  transform-origin: left center; /* Точка трансформации для крестика */
+  transition: all 0.3s ease; 
+  transform-origin: left center; 
 }
 
 .mobile-nav
@@ -85,7 +85,7 @@ header
 
   
   transform: translateX(-100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Мягкая анимация выезда */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -118,7 +118,7 @@ header
 
 .burger-checkbox:checked ~ .burger-icon span
 {
-  background-color: #000000;
+  background-color: #d11212;
 }
 
 
@@ -421,7 +421,7 @@ header
 }
 
 
-/* Подвал */
+
 
 .footer
 {
@@ -641,5 +641,3 @@ header
     font-size: 26px;
   }
 }
-
-
