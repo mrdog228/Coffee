@@ -154,7 +154,8 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(1.5);
+  /* Так делать не надо. У вас блок будет в 2 раза больше и создаст прокрутку
+  transform: scale(1.5);  */
 }
 
 .hr
