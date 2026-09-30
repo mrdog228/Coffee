@@ -1,20 +1,30 @@
 @font-face 
 {
   font-family: 'Kurale';
-  src: url('../fonts/Kurale.woff') format('woff');
+  src: url('immage/наготовленное/fonts/Kurale.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 body 
 {
-  font-family: 'Kurale', sans-serif;
+  font-family: Arial, sans-serif;
+  color: #333;
   margin: 0;
+}
+
+h1, h2, h3
+{
+  font-family: 'Kurale', serif;
 }
 
 .content
 {
-  margin-top: 14%;
+  width: 60%;
+  margin-left: 40%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .home
@@ -22,18 +32,22 @@ body
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url('immage/наготовленное/images/fon1.jpg');
+  justify-content: center;
+  background-image: url('immage/наготовленное/images/home.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: left center;
   background-attachment: fixed;
 
 }
 
 header
 {
-  margin-top: 12px;
-  margin-right: 20px; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 18px;
+  margin-right: 60px; 
   display: flex;
   justify-content: end;
 }
@@ -67,7 +81,6 @@ header
   width: 100%;
   background-color: #d11212;
   border-radius: 3px;
-  transition: all 0.3s ease; 
   transform-origin: left center; 
 }
 
@@ -85,7 +98,6 @@ header
 
   
   transform: translateX(-100%);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -102,10 +114,10 @@ header
 .nav-list a
 {
   text-decoration: none;
+  text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
   color: #334155;
-  transition: color 0.2s;
 }
 
 
@@ -141,6 +153,40 @@ header
 }
 
 
+@media (min-width: 993px)
+{
+  .burger-icon
+  {
+    display: none;
+  }
+
+  .mobile-nav
+  {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    transform: none;
+  }
+
+  .nav-list
+  {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .nav-list a
+  {
+    font-size: 15px;
+    font-weight: normal;
+    color: whitesmoke;
+  }
+
+}
+
+
 .logo 
 {
   display: flex;
@@ -154,7 +200,9 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(1.5);
+  font-size: clamp(36px, 6vw, 96px);
+  line-height: 1.1;
+  margin: 10px 0 15px;
 }
 
 .hr
@@ -162,6 +210,29 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.txt
+{
+  max-width: 1000px;
+  margin: 18px auto 0;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.txt p
+{
+  margin: 0;
+}
+
+.content .txt
+{
+  max-width: 660px;
+  margin: 15px auto 35px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 .buttom 
@@ -174,34 +245,36 @@ header
 
 .button 
 {
+  font-family: inherit;
   background-color: transparent;
-  border: 2px solid;
-  border-radius: 6px;
-  font-size: 20px;
-  padding: 10px 14px;
-  width: 250px;
+  border: 1px solid whitesmoke;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 240px;
+  height: 62px;
   color: whitesmoke;
   cursor: pointer;       
 }
 
+
 .txt .txt1
 {
   color: whitesmoke;
-  justify-content: center;
-  display: flex;
+  display: inline;
 }
 
 .txt .txt2
 {
   color: whitesmoke;
-  justify-content: center;
-  display: flex;
+  display: inline;
 }
 
 .About
 {
-  background-color: whitesmoke;
+  background-color: white;
   text-align: center;
+  padding: 100px 0 110px;
 }
 
 .candy
@@ -209,7 +282,10 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(73, 10, 10);
+  color: #333;
+  font-size: 49px;
+  line-height: 1.2;
+  margin: 0 0 12px;
 }
 
 .txt .txt3
@@ -227,14 +303,38 @@ header
 .Offer
 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 50px auto 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.Offer article
+{
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.Offer h3
+{
+  font-size: 22px;
+  margin: 15px 0 12px;
+}
+
+.Offer p
+{
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .Blog
 {
   background-image: url("immage/наготовленное/images/home2.jpg");
   background-size: cover;
-  background-position: center 20%; 
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center; 
@@ -247,7 +347,10 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(73, 10, 10);
+  color: #333;
+  font-size: 49px;
+  line-height: 1.2;
+  margin: 0 0 12px;
 }
 
 .txt .txt5
@@ -265,9 +368,11 @@ header
 .blogList
 {
   display: flex;
-  justify-content: space-around;
-  gap: 30px;
-  padding: 0 60px;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1300px;
+  margin: 50px auto 0;
+  padding: 0 10px;
   box-sizing: border-box;
   width: 100%;
 }
@@ -278,28 +383,36 @@ header
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  width: 28%;
+  width: calc((100% - 40px) / 3);
   box-sizing: border-box;
 }
 
 .photo1 img, .photo2 img, .photo3 img
 {
   width: 100%;
-  height: 300px;
+  height: 380px;
   object-fit: cover;
 }
 
 .photo1 h3, .photo2 h3, .photo3 h3
 {
-  color: rgb(73, 10, 10);
-  margin-top: 20px;
+  color: #333;
+  font-size: 22px;
+  margin: 28px 0 25px;
+}
+
+.photo1 p, .photo2 p, .photo3 p
+{
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12px;
 }
 
 .readmore
 {
-  color: rgb(73, 10, 10);
+  color: #333;
+  text-transform: uppercase;
   text-decoration: none;
-  margin-top: 10px;
   font-size: 14px;
 }
 
@@ -313,47 +426,54 @@ header
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 320px;
+  min-height: 444px;
 }
 
 .stats
 {
-  background-color: whitesmoke;
-  padding: 80px 0;
+  background-color: white;
+  padding: 120px 0 100px;
 }
 
 .statsList
 {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
   text-align: center;
 }
 
 .statsList div
 {
-  max-width: 250px;
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .statsNumber
 {
   display: block;
-  font-size: 48px;
-  color: rgb(201, 162, 94);
+  font-family: 'Kurale', serif;
+  font-size: 56px;
+  line-height: 1.2;
+  color: rgb(210, 180, 140);
 }
 
 .statsList h3
 {
-  color: rgb(73, 10, 10);
-  margin: 10px 0;
+  color: #333;
+  font-size: 22px;
+  margin: 8px 0 12px;
 }
 
 .statsList p
 {
-  color: #666;
   font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .shop
@@ -364,22 +484,24 @@ header
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center; 
-  padding: 80px 0;
+  padding: 100px 0 110px;
 }
 
 .shop h2
 {
-  color: rgb(73, 10, 10);
+  color: #333;
+  font-size: 49px;
+  line-height: 1.2;
+  margin: 0 0 12px;
 }
 
 .shopList
 {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin: 40px 0 0;
-  padding: 0 60px;
+  justify-content: center;
+  max-width: 1340px;
+  margin: 50px auto 0;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
@@ -388,36 +510,53 @@ header
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
-  min-width: 200px;
+  width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.productImg
+{
+  position: relative;
+  width: 100%;
+  max-width: 333px;
 }
 
 .product img
 {
+  display: block;
   width: 100%;
-  max-width: 220px;
 }
 
 .cartButton
 {
-  margin-top: -50px;
-  background-color: rgb(73, 10, 10);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52%;
+  height: 54px;
+  font-family: inherit;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: rgb(210, 180, 140);
   border: none;
   color: whitesmoke;
-  padding: 10px 20px;
   cursor: pointer;
 }
 
+
 .product h3
 {
-  color: rgb(73, 10, 10);
-  margin-top: 20px;
+  color: #333;
+  font-size: 22px;
+  margin: 18px 0 6px;
 }
 
 .product .price
 {
-  color: rgb(73, 10, 10);
-  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
 }
 
 
@@ -459,7 +598,7 @@ header
 
 .info
 {
-  border: 2px solid rgb(201, 162, 94);
+  border: 2px solid rgb(210, 180, 140);
   border-radius: 10px;
   box-sizing: border-box;
   width: 340px;
@@ -473,7 +612,7 @@ header
 
 .info h3
 {
-  color: rgb(201, 162, 94);
+  color: rgb(210, 180, 140);
   font-size: 26px;
   margin: 0 0 15px;
 }
@@ -498,42 +637,53 @@ header
 
 @media (max-width: 992px)
 {
+  .content
+  {
+    width: 100%;
+    margin-left: 0;
+  }
+
   .Offer
   {
     flex-wrap: wrap;
-    gap: 30px;
-    padding: 0 30px;
+    row-gap: 30px;
   }
 
   .Offer article
   {
-    width: 45%;
-  }
-
-  .Offer img
-  {
-    max-width: 100%;
+    width: 50%;
   }
 
   .blogList
   {
     flex-wrap: wrap;
-    padding: 0 30px;
   }
 
   .photo1, .photo2, .photo3
   {
-    width: 45%;
+    width: calc((100% - 20px) / 2);
+  }
+
+  .statsList
+  {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
+
+  .statsList div
+  {
+    width: 50%;
   }
 
   .shopList
   {
-    padding: 0 30px;
+    flex-wrap: wrap;
+    row-gap: 40px;
   }
 
   .product
   {
-    width: 40%;
+    width: 50%;
   }
 }
 
@@ -547,39 +697,30 @@ header
     background-attachment: scroll;
   }
 
-  .content
+  .home
   {
-    margin-top: 25%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('immage/наготовленное/images/home.jpg');
   }
 
   .fabrica
   {
-    transform: none;
+    font-size: 40px;
+  }
+
+  .candy, .s, .shop h2
+  {
     font-size: 32px;
-    text-align: center;
   }
 
-  .txt p
-  {
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .badge img
-  {
-    max-width: 90%;
-  }
-
-  .Blog, .shop
+  .About, .Blog, .shop
   {
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
-  .blogList
+  .badge img
   {
-    flex-direction: column;
-    align-items: center;
+    max-width: 90%;
   }
 
   .photo1, .photo2, .photo3
@@ -588,14 +729,14 @@ header
     max-width: 500px;
   }
 
-  .stats
+  .photo1 img, .photo2 img, .photo3 img
   {
-    padding: 50px 20px;
+    height: 300px;
   }
 
-  .statsList
+  .stats
   {
-    gap: 30px;
+    padding: 60px 0;
   }
 
   .info
@@ -608,32 +749,26 @@ header
 
 @media (max-width: 480px)
 {
-  .Offer
-  {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .Offer article
+  .Offer article, .statsList div, .product
   {
     width: 100%;
-    max-width: 320px;
   }
 
-  .shopList
+  .Offer article, .statsList div
   {
-    padding: 0 20px;
-  }
-
-  .product
-  {
-    width: 100%;
     max-width: 320px;
   }
 
   .statsNumber
   {
-    font-size: 40px;
+    font-size: 44px;
+  }
+
+  .button
+  {
+    width: 220px;
+    height: 54px;
+    font-size: 15px;
   }
 
   .footer h2
@@ -641,3 +776,4 @@ header
     font-size: 26px;
   }
 }
+
